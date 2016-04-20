@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-1.12.0.min.js"></script>
+    <script>
+        <!--remove empty-->
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("#div").empty();/*删除里面的子元素*/
+//                $("#div").remove();/*删除 包括元素*/
+            });
+        });
+    </script>
+</head>
+<body>
+<div  id="div" style="height: 200px;width: 200px;background-color: #ece023">
+    hello
+    <p>hello 1</p>
+    <p>hello 2</p>
+    <p>hello 3</p>
+</div>
+<p id="p1">hello world</p>
+<button id="btn">delete</button>
+</body>
+</html>

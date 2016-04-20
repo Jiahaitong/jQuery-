@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-1.12.0.min.js"></script>
+    <script>
+        /*sibings()
+        next()
+        nextAll()
+        nextUntil()
+        prev()
+        preAll()
+         prevUntil()
+        * */
+        $(document).ready(function(){
+//            $("h4").siblings().css({border:"3px solid  red"});
+//            $("h4").next().css({border:"3px solid  red"});
+//            $("h4").nextAll().css({border:"3px solid  red"});
+//            $("p").nextUntil("h6").css({border:"3px solid  red"});
+//            $("h2").prev().css({border:"3px solid  red"});
+//            $("h2").preAll().css({border:"3px solid  red"});
+            $("h6").prevUntil("p").css({border:"3px solid  red"});
+        });
+    </script>
+    <style>
+        .bd *{
+            display: block;
+            border: 2px solid greenyellow;
+            color: gray;
+            padding: 5px;
+            margin: 15px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="bd">
+    <p>p</p>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+</div>
+</body>
+</html>

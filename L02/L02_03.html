@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-1.12.0.min.js"></script>
+    <script>
+      $(document).ready(function(){
+     /*     $("#clickbtn").bind("click",clickeF);
+          $("#clickbtn").bind("click",clickeF2);
+          $("#clickbtn").unbind("click",clickeF2);*//*解除单个*/
+//          $("#clickbtn").unbind("click");/*解除全部*/
+          $("#clickbtn").on("click",clickeF);
+          $("#clickbtn").on("click",clickeF2);
+        $("#clickbtn").off("click",clickeF2);
+      });
+        function clickeF(e){
+            console.log("clickHander");
+        }
+      function clickeF2(e){
+          console.log("clickHander12");
+      }
+    </script>
+</head>
+<body>
+<button id="clickbtn">click me</button>
+</body>
+</html>

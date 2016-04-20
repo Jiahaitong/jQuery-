@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>setting</title>
+    <script src="../js/jquery-1.12.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#p1").text("new ");
+            });
+            $("#btn2").click(function(){
+                $("#p2").html("<a href='L04_01.html'>jikexueyuan</a> ");
+            });
+            $("#btn3").click(function(){
+                $("#i3").val("new name ");
+            });
+            $("#btn4").click(function(){
+                $("#aid").attr(
+                        {
+                            "href":"http://www.baidu.com",
+                            "title":"new title"
+                        });
+            });
+            $("#btn5").click(function(){
+                $("#p5").text(function(i,ot){
+                    return "old:"+ot+" new:new text"+(i);
+
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<p id="p1">hello world</p>
+<p id="p2">hello world</p>
+<input type="text" id="i3" value="name">
+<button id="btn1">click1</button>
+<button id="btn2">click2</button>
+<button id="btn3">click3</button>
+
+<a title="title" href="L04_01.html" id="aid">href</a>
+<button id="btn4">click4</button>
+
+<p id="p5">hello world</p>
+<button id="btn5">click5</button>
+</body>
+</html>

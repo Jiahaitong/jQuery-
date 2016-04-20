@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>标签页</title>
+    <link rel="stylesheet" type="text/css" href="css/L11.css">
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#tabfirst li").each(function(index){
+            //    alert("hello");
+                var lNode=this;
+               $(this).mouseover(function(){
+                  // alert("over");
+                   timeoutid=setTimeout(function(){
+                       $("div.content").removeClass("content");
+                       $("#tabfirst li.tabin").removeClass("tabin");
+                       $("div").eq(index).addClass("content");
+                       $(lNode).addClass("tabin");
+                   },300);
+
+                }).mouseout(function () {
+                    clearTimeout(timeoutid);
+                });
+            });
+            $("#realcontent").load("L09.html");
+            $("#tabsecond li").each(function(index){
+                $(this).click(function(){
+                    $("#tabsecond li.tabin").removeClass("tabin");
+                    $(this).addClass("tabin");
+                    if(index==0){
+                        $("#realcontent").load("L09.html");
+                    }else if(index==1){
+                        $("#realcontent").load("L10.html");
+                    }else if(index==2){
+                        $("#realcontent").load("L01_03.html");
+                    }
+                })
+            })
+        });
+    </script>
+</head>
+<body>
+<ul id="tabfirst">
+    <li class="tabin">one</li>
+    <li >two</li>
+    <li >three</li>
+</ul>
+<div class="content contentfirst">
+    content_1
+</div>
+<div class="contentfirst">
+    content_2
+</div>
+<div class="contentfirst">
+    content_3
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<ul id="tabsecond">
+    <li class="tabin">装载完整页面</li>
+    <li>装载完整页面</li>
+    <li>装载完整页面</li>
+</ul>
+<div id="contentsecond">
+    <div id="realcontent">
+
+    </div>
+</div>
+</body>
+</html>

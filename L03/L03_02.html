@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>fade</title>
+    <script src="../js/jquery-1.12.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#fadein").on("click",function(){
+                $("#div1").fadeIn(1000);
+                $("#div2").fadeIn(1000);
+                $("#div3").fadeIn(1000);
+            });
+            $("#fadeout").on("click",function(){
+                $("#div1").fadeOut(1000);
+                $("#div2").fadeOut(1000);
+                $("#div3").fadeOut(1000);
+            });
+            $("#fadetoggle").on("click",function(){
+                $("#div1").fadeToggle(1000);
+                $("#div2").fadeToggle(1000);
+                $("#div3").fadeToggle(1000);
+            });
+            $("#fadeTo").on("click",function(){
+                $("#div1").fadeTo(1000,0.5);
+                $("#div2").fadeTo(1000,0.7);
+                $("#div3").fadeTo(1000,0.3);
+            });
+        });
+    </script>
+</head>
+<body>
+<button id="fadein">fadein</button>
+<button id="fadeout">fadeout</button>
+<button id="fadetoggle">fadetoggle</button>
+<button id="fadeTo">fadeTo</button>
+<div id="div1" style=" display:none; width: 80px;height: 80px;background-color: green"></div>
+<div id="div2" style="display:none;width: 80px;height: 80px;background-color: gold"></div>
+<div id="div3" style="display:none;width: 80px;height: 80px;background-color: blue"></div>
+</body>
+</html>

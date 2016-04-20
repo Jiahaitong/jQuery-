@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <script src="../js/jquery-1.12.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("p").hide(1000);
+            });
+            $("#show").click(function(){
+                $("p").show(1000);
+            });
+            $("#toggle").click(function(){
+                $("p").toggle(1000);
+            })
+        });
+    </script>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color:gold;
+            margin: 10px ;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<p>hello</p>
+<!--
+<button id="hide">hide</button>
+<button id="show">show</button>
+<button id="toggle">hide/show</button>
+-->
+<script>
+    for(var i=0;i<5;i++){
+        $("<div>").appendTo(document.body);
+    }
+    $("div").click(function(){
+        $(this).hide(1000,function(){
+            $(this).remove();
+        });
+    });
+</script>
+</body>
+</html>

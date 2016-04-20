@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-1.12.0.min.js"></script>
+    <script>
+        /*parent()
+        * parents()
+        * parentUntil()
+        * */
+        $(document).ready(function(){
+//            $("p").parent().css("border","3px solid  red");  /*只遍历一层 直接父类*/
+//            $("p").parents().css("border","3px solid  red");/*全部向上遍历 */
+//            $("p").parents("#div2").css("border","3px solid  red");/*全部向上遍历 */
+            $("a").parentsUntil("#div1").css("border","3px solid  red");/**/
+        });
+    </script>
+    <style>
+        #div1{
+            width: 500px;
+            height: 200px;
+            border: 3px solid green;
+            background-color: #ece023;
+        }
+        #div2{
+            width: 400px;
+            height: 150px;
+            margin-top: 10px;
+            margin-left: 10px;
+            border: 3px solid green;
+        }
+        p{
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 150px;
+            height: 80px;
+            border: 3px solid green;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <div id="div2">
+        <p><a>this is a a</a> this is p</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-1.12.0.min.js"></script>
+    <script>
+        /*children
+        * find
+        * */
+        $(document).ready(function(){
+            $("#div1").children("#div2").css("border","3px solid  red");
+//            children 只针对直属下级  儿子辈
+//           $("#div1").find("a").css("border","3px solid  red");
+//            find   元素内包含的 指定是谁 就可以改谁  find 必选参数
+
+        });
+    </script>
+    <style>
+        #div1{
+            width: 500px;
+            height: 200px;
+            border: 3px solid green;
+            background-color: #ece023;
+        }
+        #div2{
+            width: 400px;
+            height: 150px;
+            margin-top: 10px;
+            margin-left: 10px;
+            border: 3px solid green;
+        }
+        p{
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 150px;
+            height: 80px;
+            border: 3px solid green;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">div1
+    <div id="div2">div2
+        <p><a>this is a a</a> is a p</p>
+    </div>
+</div>
+</body>
+</html>
